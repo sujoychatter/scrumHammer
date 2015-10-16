@@ -15,6 +15,7 @@ module.exports = function(environment) {
 
     APP: {
       apihost : 'api/v1',
+      host : 'http://riteshk.housing.com:3001'
       // Here you can pass flags/options to your application instance
       // when it is created
     },

@@ -3,9 +3,10 @@ import Ember from 'ember';
 import AppENV from 'frontend/config/environment';
 
 export default DS.RESTAdapter.extend({
+	host : AppENV.APP.host,
 	namespace : AppENV.APP.apihost,
 	coalesceFindRequests: true,
-	findQuery: function(store, type, query) {
+	query: function(store, type, query) {
 		/*
 			Extension for findQuery where you can append a string to API Url to hit.
 			For example
@@ -18,14 +19,14 @@ export default DS.RESTAdapter.extend({
 			//make a copy of query object so that changes here do not reflect on objects passed
 
 		if(query && query.appendUrl){
-			url = this.buildURL(type.typeKey)+"/"+query.appendUrl;
+			url = this.buildURL(type.modelName)+"/"+query.appendUrl;
 			delete query.appendUrl;
 		}
 		if(query && query.prependUrl){
-			url = this.buildURL()+"/"+query.prependUrl+"/"+Ember.String.pluralize(type.typeKey);
+			url = this.buildURL()+"/"+query.prependUrl+"/"+Ember.String.pluralize(type.modelName);
 			delete query.prependUrl;
 		}
-		if(url === ""){ url = this.buildURL(type.typeKey); }
+		if(url === ""){ url = this.buildURL(type.modelName); }
 	    return this.ajax(url, 'GET', { data: query });
 	}
 });

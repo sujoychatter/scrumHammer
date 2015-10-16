@@ -1,3 +1,8 @@
-<div class="top-nav-bar" id="header-bar"> SCRUM HAMMER</div>
-
+<div class="group" id="app-header">
+	<i class="fa fa-align-justify pull-left toggle-menu" {{action 'toggleSideNav'}}></i>
+	SCRUM HAMMER
+</div>
 {{outlet}}
+
+<div id='side-nav-wrapper' class={{if sideNavShow 'show'}} {{action 'toggleSideNav'}}></div>
+<div id='side-nav' class={{if sideNavShow 'show'}}></div>
