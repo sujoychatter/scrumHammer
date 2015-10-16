@@ -28,7 +28,7 @@ Rails.application.routes.draw do
         get  'teams/:id'    , to: 'teams#show'
         put  'teams/:id'    , to: 'teams#update'
 
-        get 'invite'        , to: 'invites#send_invite'
+        post 'invite'        , to: 'invites#send_invite'
     end
   end
 
