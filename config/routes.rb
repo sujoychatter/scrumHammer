@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:show]
+  namespace :api do
+    namespace :v1 do 
+        resource :team, only: [:show, :create, :destroy, :update]
+    end
+  end
 
   root to: "home#show" 
   get 'sessions/create'
