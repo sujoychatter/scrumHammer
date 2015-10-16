@@ -27,8 +27,11 @@ frontend/tmp
 
 public/assets
 public/index.html
+public/app.html
 public/crossdomain.xml
 public/fonts
 public/tests
 public/testem.js
 public/robots.txt
+
+app/views/app.html

@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def show
-  end
+	def index_serve
+		render '/app.html', layout: false
+	end
 end
