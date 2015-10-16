@@ -15,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+.DS_Store
+._*
+
+frontend/node_modules
+frontend/bower_components
+frontend/dist

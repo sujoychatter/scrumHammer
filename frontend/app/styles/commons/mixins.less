@@ -1,0 +1,63 @@
+.property-responsive(@property,@small,@medium,@large,@xlarge,@xxlarge: ""){ 
+  @media (max-width:@small-max-width){ @{property}: @small; }
+  @media (min-width:@medium-min-width) and (max-width:@medium-max-width){ @{property}: @medium; }
+  @media (min-width:@large-min-width) and (max-width:@large-max-width){ @{property}: @large; }
+  @media (min-width:@xlarge-min-width) and (max-width:@xlarge-max-width) { @{property}: @xlarge; }
+  @media (min-width:@xxlarge-min-width) { @{property}: @xxlarge; }
+}
+
+.position(@position: relative, @top: auto, @right: auto, @bottom: auto, @left: auto){
+	position : @position;
+	top      : @top;
+	right    : @right;
+	bottom   : @bottom;
+	left     : @left;
+}
+
+.rounded-box{ border-radius: 2px; }
+
+.mycrofto-button(@background-color:transparent,@hover-color:transparent,@text-color:#fff) {
+	.rounded-box;
+	outline    : none;
+	border     : none;
+	padding    : 4px 10px;
+	background : @background-color;
+	color      : @text-color;
+	transition : @all-animated;
+	&:hover{ background: @hover-color; }
+}
+
+.background-image-ret(@normal_url,@retina_url){
+	background-image: url(@normal_url);
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) { 
+  
+	  	background-image: url(@retina_url);
+	}
+}
+
+.border-bottom(@border-radius:2px){
+	border-bottom-right-radius : @border-radius;
+	border-bottom-left-radius  : @border-radius;
+}
+.border-top(@border-radius:2px){
+	border-top-right-radius : @border-radius;
+	border-top-left-radius  : @border-radius;
+}
+.border-right(@border-radius:2px){
+	border-top-right-radius    : @border-radius;
+	border-bottom-right-radius : @border-radius;	
+}
+.border-left(@border-radius:2px){
+	border-top-left-radius    : @border-radius;
+	border-bottom-left-radius : @border-radius;	
+}
+
+.transition(@property:all,@time:@animation-time-default,@easing:@animation-easing){
+	transition : @property @time @easing;
+}
