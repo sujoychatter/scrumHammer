@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
-	def index_serve
-		render '/app.html', layout: false
+	def show
+		user = current_user
+		if user
+			render '/app.html', layout: false
+		end
 	end
 end
