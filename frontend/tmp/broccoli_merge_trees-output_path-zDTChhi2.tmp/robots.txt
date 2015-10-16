@@ -1,0 +1,1 @@
+/home/dev/scrumHammer/frontend/public/robots.txt

@@ -1,0 +1,1 @@
+/home/dev/scrumHammer/frontend/tmp/babel-cache_path-Xokhb2vm.tmp/modules/ember-cli-app-version/initializer-factory.js
