@@ -1,0 +1,8 @@
+<form id='create-team-form' {{action "createTeam" on="submit"}}>
+	{{input value=name id='name' required=true}}
+	{{input value=domain id='domain' required=true pattern='^(?:[a-zA-Z0-9]+(?:\-*[a-zA-Z0-9])*\.)+[a-zA-Z]{2,6}$'}}
+	{{input value=maxHammerCount id='hammer-count' required=true type="number"}}
+	{{input value=scrumStartTime id='scrum-start-time' required=true type="time"}}
+	{{input value=scrumEndTime id='scrum-end-time' required=true type="time"}}
+	{{input type='submit' id='create-team-button' value=submitText}}
+</form>

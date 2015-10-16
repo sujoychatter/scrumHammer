@@ -3,5 +3,9 @@ import AppENV		from 'frontend/config/environment';
 import PromiseAjax  from 'frontend/utils/promise-ajax';
 
 export default DS.Model.extend({
-	name : DS.attr('string')
+	name           : DS.attr('string'),
+	domain         : DS.attr('string'),
+	startTime      : DS.attr('string'),
+	endTime        : DS.attr('string'),
+	maxHammerCount : DS.attr('string')
 });

@@ -7,10 +7,10 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('vendor/stylesheets/material.min.css');
+  // app.import('vendor/stylesheets/material.min.css');
   app.import('bower_components/font-awesome/css/font-awesome.min.css');
 
-  app.import('vendor/scripts/material.min.js');
+  // app.import('vendor/scripts/material.min.js');
   app.import("bower_components/prefixfree/prefixfree.min.js");
 
   return app.toTree();
