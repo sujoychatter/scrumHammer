@@ -1,13 +1,23 @@
 class Api::V1::UsersController < ApplicationController
+	skip_before_filter :verify_authenticity_token
 	before_filter :fetch_user, :except => [:index, :create]
 	
 	def fetch_user
 		@user = User.find_by_id(params[:id])
 	end
 
-	def show 
-		@users = User.all
+	def index 
+		@users = TeamUser.all
 		render :json => @users
+	end
+
+	def show 
+		render :json => @user
+	end
+
+	def my_data
+		@user = User.first
+		render :json => @user
 	end
 	
 	def update

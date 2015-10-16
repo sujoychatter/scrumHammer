@@ -7,12 +7,28 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
   namespace :api do
     namespace :v1 do 
-        resource :team, only: [:show, :create, :destroy, :update]
-        resource :sprints, only: [:show, :create, :destroy, :update]
-        resource :team_users, only: [:show, :create, :destroy, :update]
-        resource :users, only: [:show, :create, :destroy, :update]
-        get 'invite', to: 'invites#send_invite'
-        get 'me', to: 'users#my_data'
+        get  'sprints'        , to: 'sprints#index'
+        post 'sprints'        , to: 'sprints#create'
+        get  'sprints/:id'    , to: 'sprints#show'
+        put  'sprints/:id'    , to: 'sprints#update'
+        
+        get  'team_users'        , to: 'team_users#index'
+        post 'team_users'        , to: 'team_users#create'
+        get  'team_users/:id'    , to: 'team_users#show'
+        put  'team_users/:id'    , to: 'team_users#update'
+        
+        get  'users'        , to: 'users#index'
+        post 'users'        , to: 'users#create'
+        get  'users/:id'    , to: 'users#show'
+        put  'users/:id'    , to: 'users#update'
+        get  'users/me'     , to: 'users#my_data'
+        
+        get  'teams'        , to: 'teams#index'
+        post 'teams'        , to: 'teams#create'
+        get  'teams/:id'    , to: 'teams#show'
+        put  'teams/:id'    , to: 'teams#update'
+
+        get 'invite'        , to: 'invites#send_invite'
     end
   end
 

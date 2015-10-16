@@ -1,13 +1,18 @@
 class Api::V1::SprintsController < ApplicationController
-	before_filter :fetch_sprint, :except => [:show, :create]
+	skip_before_filter :verify_authenticity_token
+	before_filter :fetch_sprint, :except => [:index, :create]
 	
 	def fetch_sprint
 		@sprint = Sprint.find_by_id(params[:id])
 	end
 
-	def show 
+	def index 
 		@sprints = Sprint.all
 		render :json => @sprints
+	end
+
+	def show
+		render :json => @sprint
 	end
 	
 	def update
