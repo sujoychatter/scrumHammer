@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	side_nav_collapsed : true,
+	side_nav_show : false,
 	actions : {
 		toggleSideNav : function(){
-			console.log('great stuff');
+			this.toggleProperty('side_nav_show');
 		}
 	}
 });

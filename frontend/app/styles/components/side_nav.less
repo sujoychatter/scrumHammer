@@ -1,0 +1,12 @@
+#side-nav {
+	position   : fixed;
+	top        : 0;
+	left       : 0;
+	bottom     : 0;
+	background : #333;
+	width      : 70%;
+	max-width  : 460px;
+	transform  : translate3d(-100%,0,0);
+	.transition(transform,0.15s,ease-in-out);
+	&.show { transform  : translate3d(0,0,0); }
+}

@@ -1,6 +1,6 @@
 <div class="top-nav-bar" id="header-bar">
-	<button {{action 'toggleSideNav'}}><i class="fa fa-align-justify"></i></button>
+	<i class="fa fa-align-justify" {{action 'toggleSideNav'}}></i>
 	SCRUM HAMMER
 </div>
 {{outlet}}
-{{side-nav collapsed}}
+<div id='side-nav' class={{if side_nav_show 'show'}}></div>
