@@ -1,8 +1,35 @@
-<div class="top-nav-bar" id="header-bar">
-	<i class="fa fa-align-justify" {{action 'toggleSideNav'}}></i>
-	SCRUM HAMMER
+<div class="group" id="app-header">
+	<i class="fa fa-align-justify pull-left toggle-menu" {{action 'toggleSideNav'}}></i>
+	<span>{{pageTitle}}</span>
 </div>
 {{outlet}}
 
 <div id='side-nav-wrapper' class={{if sideNavShow 'show'}} {{action 'toggleSideNav'}}></div>
-<div id='side-nav' class={{if sideNavShow 'show'}}></div>
+<div id='side-nav' class={{if sideNavShow 'show'}}>
+	<div class='user-side-nav'>
+		<div class='side-dp-div'>
+		</div>
+		<div class='user-name'>Abhilash</div>
+	</div>
+	<div id='side-nav-panel' class={{if sideNavShow 'show'}}>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>Your Teams</div>
+		</div>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>All Teams</div>
+		</div>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>Create A Team</div>
+		</div>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>Buddies</div>
+		</div>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>Pings</div>
+		</div>
+		<div class='panel-wrapper'>
+			<div class='panel-elem'>Treats</div>
+		</div>
+	</div>
+</div>
+
