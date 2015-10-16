@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: "home#show" 
+  root to: "home#show"
   get 'sessions/create'
 
   get 'sessions/destroy'

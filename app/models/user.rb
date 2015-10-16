@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :team_users
+  has_many :sprint_users
+  has_many :sprints, through: :sprint_users
+  has_many :teams, through: :team_users
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth.provider
