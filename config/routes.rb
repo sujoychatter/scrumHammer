@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do 
         resource :team, only: [:show, :create, :destroy, :update]
+        resource :sprints, only: [:show, :create, :destroy, :update]
+        resource :team_users, only: [:show, :create, :destroy, :update]
     end
   end
 
