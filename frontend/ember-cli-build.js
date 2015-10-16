@@ -6,7 +6,7 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('vendor/stylesheets/materialize.min.css');
+  app.import('vendor/stylesheets/material.min.css');
   app.import('vendor/scripts/material.min.js');
 
   // Use `app.import` to add additional libraries to the generated

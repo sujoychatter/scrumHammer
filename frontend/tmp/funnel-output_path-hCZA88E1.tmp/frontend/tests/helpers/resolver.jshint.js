@@ -1,0 +1,1 @@
+/home/dev/scrumHammer/frontend/tmp/jshinter-cache_path-keaWTwla.tmp/helpers/resolver.jshint.js

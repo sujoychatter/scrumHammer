@@ -1,0 +1,1 @@
+/home/dev/scrumHammer/frontend/bower_components/loader.js
