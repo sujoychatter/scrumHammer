@@ -1,4 +1,4 @@
-class Api::V1::TeamUserUsersController < ApplicationController
+class Api::V1::TeamUsersController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	before_filter :fetch_team_user, :except => [:index, :create]
 	
@@ -11,7 +11,7 @@ class Api::V1::TeamUserUsersController < ApplicationController
 		render :json => @team_users
 	end
 
-	def show 
+	def show
 		render :json => @team_user
 	end
 	
