@@ -18,6 +18,7 @@
 
 .DS_Store
 ._*
+db/schema.rb
 
 frontend/node_modules
 frontend/bower_components

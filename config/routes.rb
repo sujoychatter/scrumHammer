@@ -10,6 +10,9 @@ Rails.application.routes.draw do
         resource :team, only: [:show, :create, :destroy, :update]
         resource :sprints, only: [:show, :create, :destroy, :update]
         resource :team_users, only: [:show, :create, :destroy, :update]
+        resource :users, only: [:show, :create, :destroy, :update]
+        get 'invite', to: 'invites#send_invite'
+        get 'me', to: 'users#my_data'
     end
   end
 
