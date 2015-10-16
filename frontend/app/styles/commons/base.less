@@ -6,10 +6,42 @@ html {
 *, *:before, *:after { box-sizing: inherit; }
 
 body { 
-	position    : relative;
-	font-family : "ProximaNova";
-	font-size   : @regular_text; 
-	line-height : 130%;
-	min-height  : 100%;
-	background-color: @material_orange;
+	position         : relative;
+	font-family      : "ProximaNova";
+	font-size        : @regular_text; 
+	line-height      : 130%;
+	min-height       : 100%;
+	background-color : @material_orange;
 }
+
+a.ember-view { text-decoration: none; }
+
+//Floats
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+//Clear Floats
+.group:after {
+	content : "";
+	display : table;
+	clear   : both;
+}
+
+//Text 
+.bold-text {
+	font-family    : 'ProximaNovaSemiBold';
+	font-weight    : normal;
+}
+.first-letter-caps { 
+	display: inline-block; 
+	&::first-letter { text-transform: uppercase; }
+}
+.ellipsis{
+	white-space   : nowrap;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+}
+.capitalize 	{text-transform: capitalize;}
+.uppercased 	{text-transform: uppercase;}
+
+// [data-ember-action], .clickable { cursor: pointer; }
